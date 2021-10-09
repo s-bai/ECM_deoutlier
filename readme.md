@@ -12,6 +12,8 @@ Thank you for visiting the repo for the current research!
 3. The MATLAB(R) code of the MMA optimizer should be obtained following the instructions published on:
 <https://people.kth.se/~krille/>.
 
+Please install the CVX toolbox in MATLAB(R) following the directions provided therein.
+
 After the MMA codes are obtained, please modify Line 195 in "det_lof_2d.m" in folder "NRBTO" with the main function name of the MMA optimizer.
 
 Also, please modify Line 222 in "nrbto_lof_2d.m" in folder "NRBTO" with the main function name of the MMA optimizer.
