@@ -1,0 +1,8 @@
+
+--------------------------------------------------------------
+
+  The scheduled batch jobs have been successfully submitted.
+                                                            
+                    Thank you very much!                    
+                                                            
+--------------------------------------------------------------
