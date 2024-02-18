@@ -40,12 +40,18 @@ In this folder,
 
 2. The parameters for the batch jobs of the NRTO are stored in the sequential files "NRTO_cantilever_beam_##.m", where "##" is the sequence number starting from "01". The NRTO batch jobs are executed using the function "NRTO_batch_job.m".
 
-## Topology evolution
+## Detection of outliers and construction of ellipsoid convex model
 
-### Deterministic solution
+### The 3D example
+
+![Three dimentional example](./image/outlier_ECM_3D.jpg)
+
+## Application in Non-probabilistic Robust Topology evolutions
+
+### Deterministic solution's evolution
 
 ![Deterministic solution](./image/NRTO_normal.gif)
 
-### Robust solution
+### Robust solution's evolution
 
 ![Robust solution](./image/NRTO_all.gif)
