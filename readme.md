@@ -46,12 +46,16 @@ In this folder,
 
 ![Three dimentional example](./image/outlier_ECM_3D.jpg)
 
-## Application in Non-probabilistic Robust Topology evolutions
+## Application in Non-probabilistic Robust Topology optimization
 
 ### Deterministic solution's evolution
 
-![Deterministic solution](./image/NRTO_normal.gif)
+![Deterministic solution](./image/deterministic.gif)
 
-### Robust solution's evolution
+### Evolution of robust solution based on the normal samples
 
-![Robust solution](./image/NRTO_all.gif)
+![Robust solution based on normal samples](./image/NRTO_normal.gif)
+
+### Evolution of robust solution based on all samples
+
+![Robust solution based on all samples](./image/NRTO_all.gif)
