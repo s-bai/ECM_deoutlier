@@ -39,3 +39,13 @@ In this folder,
 1. "deterministic_cantilever_beam.jason" contains the parameters for the deterministic topology optimization. The deterministic optimization is executed using the function "det_lof_2d.m".
 
 2. The parameters for the batch jobs of the NRTO are stored in the sequential files "NRTO_cantilever_beam_##.m", where "##" is the sequence number starting from "01". The NRTO batch jobs are executed using the function "NRTO_batch_job.m".
+
+## Topology evolution
+
+### Deterministic solution
+
+![Deterministic solution](./image/NRTO_normal.gif)
+
+### Robust solution
+
+![Robust solution](./image/NRTO_all.gif)
