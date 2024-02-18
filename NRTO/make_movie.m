@@ -5,8 +5,8 @@ function make_movie(pause_interval_user_specified, record_flag)
     % pause_interval_user_specified: Pause interval between two frames (0.05 sec by default)
     % record_flag: The flag marking whether to make the movie (1 for true, 0 for false)
 
-    %% Load the latest NRBTO results MAT file
-    mat_file_infor = dir('NRBTO*.mat');
+    %% Load the latest NRTO results MAT file
+    mat_file_infor = dir('NRTO*.mat');
 
     mat_file_timestamp = zeros(length(mat_file_infor), 1);
 
@@ -18,7 +18,7 @@ function make_movie(pause_interval_user_specified, record_flag)
 
     [~, mat_file_timestamp_latest] = max(mat_file_timestamp);
 
-    fprintf('\n\n\nThe latest NRBTO results file is: %s\n', mat_file_infor(mat_file_timestamp_latest).name);
+    fprintf('\n\n\nThe latest NRTO results file is: %s\n', mat_file_infor(mat_file_timestamp_latest).name);
     results = load(mat_file_infor(mat_file_timestamp_latest).name);
 
     %%
@@ -36,7 +36,7 @@ function make_movie(pause_interval_user_specified, record_flag)
     if nargin > 1
 
         if record_flag ~= 0
-            video_handle = VideoWriter('NRBTO_iteration_movie.avi');
+            video_handle = VideoWriter('NRTO_iteration_movie.avi');
             video_handle.FrameRate = 1.5;
             open(video_handle);
 

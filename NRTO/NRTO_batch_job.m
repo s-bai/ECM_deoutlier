@@ -1,7 +1,7 @@
-function NRBTO_batch_job()
-    %% This script submits the batch job of the NRBTO numerical examples (void input argument)
-    NRBTO_batch_filenames = dir('NRBTO_cantilever_beam_*.json');
-    n_files = length(NRBTO_batch_filenames);
+function NRTO_batch_job()
+    %% This script submits the batch job of the NRTO numerical examples (void input argument)
+    NRTO_batch_filenames = dir('NRTO_cantilever_beam_*.json');
+    n_files = length(NRTO_batch_filenames);
 
     %% Get the current directory
     FolderName = pwd;
@@ -9,7 +9,7 @@ function NRBTO_batch_job()
     %% Submit the batch job
     for ii = 1:n_files
 
-        nrbto_lof_2d(NRBTO_batch_filenames(ii).name);
+        nrto_lof_2d(NRTO_batch_filenames(ii).name);
 
         %% Save all opened figures as .fig file
         FigList = findobj(allchild(0), 'flat', 'Type', 'figure');

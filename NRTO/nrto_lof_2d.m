@@ -1,5 +1,5 @@
-function nrbto_lof_2d(JSON_filename)
-    %% ----------- Non-probabilistic Reliability-Based Topology Optimization of 2D structure -----------
+function nrto_lof_2d(JSON_filename)
+    %% ----------- Non-probabilistic Robust Topology Optimization of 2D structure -----------
     %
     %
     %                              Song Bai, Daming Li and Zhan Kang
@@ -18,7 +18,7 @@ function nrbto_lof_2d(JSON_filename)
     if nargin > 0
         JSON_data = jsondecode(fileread(JSON_filename));
     else
-        JSON_data = jsondecode(fileread('NRBTO_cantilever_beam.json'));
+        JSON_data = jsondecode(fileread('NRTO_cantilever_beam_normal_1point2.json'));
     end
 
     % nelx, nely: Numbers of elements in x and y directions.
@@ -154,7 +154,7 @@ function nrbto_lof_2d(JSON_filename)
     clock_string = get_clock();
 
     % Create the MAT file for saving results
-    result_file = strcat('NRBTO_', clock_string, '.mat');
+    result_file = strcat('NRTO_', clock_string, '.mat');
 
     % Start the stopwatch timer
     t_start = tic;
@@ -171,7 +171,7 @@ function nrbto_lof_2d(JSON_filename)
 
         end
 
-        %% Calculate the NRBTO objective function (the total volume fraction)
+        %% Calculate the NRTO objective function (the total volume fraction)
         volume_fraction_history(1, iter) = mean(mean(rho));
         objective_volume = objective_epsilon * mean(mean(rho));
 
@@ -179,7 +179,7 @@ function nrbto_lof_2d(JSON_filename)
         D_objective_volume = objective_epsilon * ones(nelx * nely, 1) / (nelx * nely);
         D2_objective_volume = 0 * D_objective_volume;
 
-        %% Calculate the NRBTO constraint functions
+        %% Calculate the NRTO constraint functions
         %       Alpha: n_Ui-by-1 vector
         %       D_Alpha_D_rho: (nelx * nely)-by-n_Ui matrix
         %       concerned_point: n_phi-by-n_Ui matrix
