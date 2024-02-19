@@ -1,4 +1,4 @@
-# Construction of ellipsoid convex model with outlier detection and its application in Non-Probabilistic Topology Optimization
+# Construction of Ellipsoid Convex Model with outlier detection and its application in Non-Probabilistic Topology Optimization
 
 Thank you for visiting the repo for the current research!
 
@@ -28,7 +28,7 @@ The input parameters are included in the file "find_outlier_settings.json", wher
 
 2. "normalization": The flag of the normalization of the samples, "true" for normalize, "false" for not normalize.
 
-Execute the main function "find_outlier.m" to construct the ellipsoid convex model with outliers detection. The results are printed to the command window, as well as recorded in the MAT-file.
+***Execute the main function "find_outlier.m" to construct the ellipsoid convex model with outliers detection.***
 
 ## NRTO
 
@@ -38,11 +38,14 @@ In this folder,
 
 1. "deterministic_cantilever_beam.jason" contains the parameters for the deterministic topology optimization. The deterministic optimization is executed using the function "det_lof_2d.m".
 
-2. The parameters for the batch jobs of the NRTO are stored in the sequential files "NRTO_cantilever_beam_##.m", where "##" is the sequence number starting from "01". The NRTO batch jobs are executed using the function "NRTO_batch_job.m".
+2. The parameters for the NRTO are stored in the file "NRTO_cantilever_beam_##.m", where "##" represents the cases such as "NRTO_cantilever_beam_normal_1point2" is for NRTO based on
+   normal samples and the target robustness index being 1.2.
 
-## Detection of outliers and construction of ellipsoid convex model
+   ***Modify Line 21 in "nrto_lof_2d.m" to chage the case before executing NRTO using this function.***
 
-### The 3D example
+## Showcase for the present study
+
+### Outlier detection of 3D samples and construction of ellipsoid convex model
 
 ![Three dimentional example](./image/outlier_ECM_3D.jpg)
 
