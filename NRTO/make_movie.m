@@ -37,7 +37,7 @@ function make_movie(pause_interval_user_specified, record_flag)
 
         if record_flag ~= 0
             video_handle = VideoWriter('NRTO_iteration_movie.avi');
-            video_handle.FrameRate = 1.5;
+            video_handle.FrameRate = 24;
             open(video_handle);
 
         end
